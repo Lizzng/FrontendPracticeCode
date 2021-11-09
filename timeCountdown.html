@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+< lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <script>
+
+        // d = parseInt(总秒数/60/60/24)； 计算天数
+        // h = parseInt(总秒数/60/60%24)； 计算小时
+        // m = parseInt(总秒数/60%60)； 计算分数
+        // s = parseInt(总秒数%60)； 计算当前秒数
+
+
+        function countDown(time) {
+            var nowTime = +new Date();// 返回当前时间的总毫秒数
+            var inputTime = +new Date(time);// 返回用户输入的时间总毫秒书
+            var times = (inputTime - nowTime) / 1000; //times is remaining time in mil seconds
+            //1000 mil seconds equals 1 second
+            var d = parseInt(times / 60 / 60 / 24); //milsecond / min/ hour/ day to get days
+            d = d < 10 ? '0' + d : d;
+
+            h = parseInt(times / 60 / 60 % 24); //get hour
+            h = h < 10 ? '0' + h : h;
+
+            m = parseInt(times / 60 % 60); //get minute
+            m = m < 10 ? '0' + m : m;
+
+            s = parseInt(times % 60); //current second
+            s = s < 10 ? '0' + s : s;
+
+            return d + 'day ' + h + 'hour(s) ' + m + 'minute(s) ' + s + 'second(s)';
+
+        }
+        console.log(countDown('2021-10-25 18:00:00'));
+        var date = new Date();
+        console.log(date);
+    </script>
+
+    <body>
+
+    </body>
+
+    </html>

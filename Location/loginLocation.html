@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- form default to GET -->
+    <form action="index.html">
+        User Name: <input type="text" name="uname">
+    </form>
+    <button>Click</button>
+    <script>
+        var btn = document.querySelector('button');
+        btn.addEventListener('click', function () {
+            //assign() 记录浏览历史， 所以可以实现后退功能
+            location.assign('http://www.baidu.com');
+
+            //replace() 不记录浏览历史 无后退功能
+            // location.replace('http://baidu,com');
+
+            //reload() 刷新
+            // location.reload();
+        })
+    </script>
+</body>
+
+</html>

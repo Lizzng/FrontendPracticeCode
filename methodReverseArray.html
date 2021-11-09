@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+
+    function reverse(arr) {
+
+        if (arr instanceof Array) {
+            var newArr = [];
+
+            for (var i = arr.length - 1; i >= 0; i--) {
+
+                newArr[newArr.length] = arr[i];
+
+            }
+            return newArr;
+        } else {
+            return 'Error: This parameter must be an array format [2,3,3]';
+        }
+
+    }
+    var arr1 = reverse([2, 4, 5, 6, 7, 8]);
+    console.log(arr1);
+
+    var arr2 = reverse(['red', 'blue', 'pink']);
+    console.log(arr2);
+
+    //check if it's array list
+    //(1) instanceof operator check if it's array
+    var arr = [];
+    var obj = {};
+    console.log(arr instanceof Array);
+    console.log(obj instanceof Array);
+
+    //(2) Array.isArray() new method addd to H5  support by ie9+ only 
+    console.log(Array.isArray(arr));
+
+    console.log(Array.isArray(obj));
+
+</script>
+
+<body>
+
+</body>
+
+</html>

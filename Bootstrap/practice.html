@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        // function shuffle(num) {
+        //     var str = num.toString();
+        //     var result = "";
+        //     if (!isNaN(num) && num >= 0 && num <= 100000000) {
+        //         for (var i = 0; i < str.length; i++) {
+        //             if (i % 2 == 0) {
+        //                 result += str[Math.floor(i / 2)];
+        //             } else {
+        //                 result += str[str.length - Math.floor(i / 2 + 1)];
+        //             }
+        //         }
+        //     }
+        //     return result;
+        // }
+
+        // console.log(shuffle(123456));  // 162534
+        // console.log(shuffle(1234567)); // 1726354
+        // console.log(shuffle(104));     // 140
+
+
+
+        var message = "Codility We test coders";
+        var K = 14;
+        const reK = "";
+        function crop(message, K) {
+            if (K < 1) return "";
+            reK = new RegExp(`^.{0,${K - 1}}[^ ](?= |$)`);
+            return (message.match(reK) || [""])[0];
+            console.log((message.match(reK) || [""])[0]);
+        }
+        console.log((message.match(reK) || [""])[0]);
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
